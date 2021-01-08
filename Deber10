@@ -1,0 +1,51 @@
+/* UNIVERSIDAD TECNICA DEL NORTE
+            FICA-CITEL
+        SISTEMAS ENBEBIDOS
+        VILLEGAS CHRISTIAN
+             DEBER 10
+*/
+int x = 300;
+int y = 300;
+void setup()
+{
+  size(600,600);
+  background(#9921EA);
+}
+
+void draw()
+{
+  background(#9921EA);
+  ellipse(x,y,50,50);
+  if(keyPressed)
+{
+
+switch(keyCode)
+  {
+    case 38:
+    y=y-10;
+    break;
+    case 40:
+    y=y+10;
+    break;
+    case 39:
+    x=x+10;
+    break;
+    case 37:
+    x=x-10;
+    break;
+    default:
+    break;
+  }
+  
+  if(x>=575)
+  x= 575;
+  if(x<=25)
+  x=25;
+  if(y>=575)
+  y= 575;
+  if(y<=25)
+  y=25;
+  
+  ellipse(x,y,50,50);
+  }
+}
